@@ -1,9 +1,10 @@
 import './CampoTexto.css'
-const CampoTexto = () => {
+const CampoTexto = (props) => { 
+    //const placeholderModificada = `${props.placeholder}` (*Usado para concatenar strings)
     return (
-        <div>
-            <label className="campo-texto">Nome</label>
-            <input></input>
+        <div className="campo-texto">
+            <label>{props.label}</label>
+            <input placeholder={props.placeholder}/>
         </div>
     )
 }
